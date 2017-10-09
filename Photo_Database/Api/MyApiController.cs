@@ -16,11 +16,13 @@ namespace Photo_Database.Controllers
         public IHttpActionResult AddPerson(Person person)
         {            
             var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
-            var sql = $"Insert into Person(PersonName, PersonContext) Values('{person.Name}', '{person.Context}')";
+            var sql = $"Insert into Person(PersonName, PersonContext) Values(@name, @context)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = new SqlCommand(sql, connection);
+                command.Parameters.Add(new SqlParameter("name", person.Name));
+                command.Parameters.Add(new SqlParameter("context", person.Context));
                 connection.Open();
 
                 command.ExecuteNonQuery();
