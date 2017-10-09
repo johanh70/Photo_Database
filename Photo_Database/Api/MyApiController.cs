@@ -14,9 +14,9 @@ namespace Photo_Database.Controllers
     {
         [Route("AddPerson"), HttpPost]
         public IHttpActionResult AddPerson(Person person)
-        {
+        {            
             var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
-            var sql = "Insert into Person(PersonName, PersonContext) Values('Anders', 'Kollega')";
+            var sql = $"Insert into Person(PersonName, PersonContext) Values('{person.Name}', '{person.Context}')";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
