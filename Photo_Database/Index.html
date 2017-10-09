@@ -3,9 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+
+    <style>
+        td {border:solid 1px; padding:10px}
+        thead td {font-weight:bold}
+    </style>
 </head>
 <body>
     Photo Database
+
+    <table id="peopleTable">
+        <thead>
+            <tr>
+                <td>Namn</td>
+                <td>Kontext</td>
+            </tr>
+        </thead>    
+        <tbody>
+            <!-- 
+            <tr>
+                <td>Lisa</td>
+                <td>vän</td>
+            </tr>-->
+        </tbody>
+    </table>
+
+    <hr />
+
     <div>
         <label>Namn</label>
         <input id="name" type="text" />

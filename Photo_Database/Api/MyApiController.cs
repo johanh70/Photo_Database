@@ -12,18 +12,48 @@ namespace Photo_Database.Controllers
     [RoutePrefix("api")]
     public class MyApiController : ApiController
     {
+
+        [Route("GetPeople"), HttpGet]
+        public IHttpActionResult GetPeople()
+        {
+            var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
+            var sql = $"select * from Person";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(sql, connection);
+                connection.Open();
+                var reader = command.ExecuteReader();
+                var list = new List<Person>();
+
+                while (reader.Read())
+                {
+                    var id = reader[0];
+                    var personName = reader[1];
+                    var personContext = reader[2];
+                    Person p = new Person();
+                    p.Id = (int)id;
+                    p.Name = personName.ToString();
+                    p.Context = personContext.ToString();
+
+                    list.Add(p);
+                }
+                return Ok(list);
+            }
+        }
+
         [Route("AddPerson"), HttpPost]
         public IHttpActionResult AddPerson(Person person)
         {
             // Om personens namn har färre tecken än 4 så svara med BadRequest
-            if (person.Name.Length < 4)
+            if (person.Name.Length < 3)
             {
-                return BadRequest();
+                return BadRequest("personerror");
             }
 
             if (person.Context.Length < 4)
             {
-                return BadRequest();
+                return BadRequest("contexterror");
             }
 
             var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
