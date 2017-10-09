@@ -14,10 +14,10 @@
         }
     })
         .done(function (result) {
-            $("#response").html(`#response`).html(`Svar: ${result}`);
+            $("#response").html(`Personen har lagts till i databasen`);
         })
         .fail(function (xhr, status, error) {
-            $("#error").html(`#Error! ${xhr.responseJSON.Message}`);
+            $("#response").html(`Något gick fel!`);
         })
 })
 

@@ -14,7 +14,18 @@ namespace Photo_Database.Controllers
     {
         [Route("AddPerson"), HttpPost]
         public IHttpActionResult AddPerson(Person person)
-        {            
+        {
+            // Om personens namn har färre tecken än 4 så svara med BadRequest
+            if (person.Name.Length < 4)
+            {
+                return BadRequest();
+            }
+
+            if (person.Context.Length < 4)
+            {
+                return BadRequest();
+            }
+
             var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
             var sql = $"Insert into Person(PersonName, PersonContext) Values(@name, @context)";
 
