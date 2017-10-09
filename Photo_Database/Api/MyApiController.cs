@@ -12,7 +12,6 @@ namespace Photo_Database.Controllers
     [RoutePrefix("api")]
     public class MyApiController : ApiController
     {
-
         [Route("GetPeople"), HttpGet]
         public IHttpActionResult GetPeople()
         {
@@ -41,7 +40,7 @@ namespace Photo_Database.Controllers
                 return Ok(list);
             }
         }
-
+        
         [Route("AddPerson"), HttpPost]
         public IHttpActionResult AddPerson(Person person)
         {
