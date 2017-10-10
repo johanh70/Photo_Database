@@ -59,7 +59,7 @@ $("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
 
 $("#deletePerson").click(function () {
 
-    let id = $("#id").val()
+    let id = $("#id2").val()
 
     //console.log(`Loggar in. Person-Id är ${id} och Namnet är ${n}`)
 
@@ -81,6 +81,43 @@ $("#deletePerson").click(function () {
             if (xhr.responseJSON.Message == "id_error") {
 
                 $("#response").html(`Skriv in ett Person-Id med siffra/siffror`);
+            }
+        })
+})
+
+$("#updatePerson").click(function () {  
+
+    let id = $("#id1").val()
+    let n = $("#name2").val()
+    let c = $("#context2").val()
+
+    //console.log(`Loggar in. Namnet är ${n} och kontext är ${c}`)
+
+    $.ajax({
+        url: '/api/updatePerson',
+        method: 'POST',
+        data: {
+            id: id,
+            name: n,
+            context: c
+        }
+    })
+        .done(function (result) {
+            $("#response").html(`Personen har uppdaterats i databasen`);
+            showPeople()
+        })
+        .fail(function (xhr, status, error) {
+
+            console.log(xhr.responseJSON.Message)
+
+            if (xhr.responseJSON.Message == "personerror") {
+
+                $("#response").html(`Skriv in ett namn som är minst fyra bokstäver långt`);
+            }
+
+            else if (xhr.responseJSON.Message == "contexterror") {
+
+                $("#response").html(`Skriv in en kontext som är minst tre bokstäver lång`);
             }
         })
 })

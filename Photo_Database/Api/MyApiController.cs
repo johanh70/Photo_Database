@@ -72,6 +72,30 @@ namespace Photo_Database.Controllers
             return Ok();
         }
 
+        [Route("UpdatePerson"), HttpPost]
+        public IHttpActionResult UpdatePerson(Person person)
+        {
+            //if (person.Id < 1 ) //TODO - Kolla att det är numeriskt värde (se textfil)
+            //{
+            //    return BadRequest("id_error");
+            //}
+
+            var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
+            var sql = $"UPDATE Person SET PersonName = @name2, PersonContext = @context2 WHERE PersonId = @id1";                        
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(sql, connection);
+                command.Parameters.Add(new SqlParameter("id", person.Id));
+                command.Parameters.Add(new SqlParameter("name", person.Name));
+                command.Parameters.Add(new SqlParameter("context", person.Context));
+                connection.Open();
+
+                command.ExecuteNonQuery();
+            }
+            return Ok();
+        }
+
         [Route("DeletePerson"), HttpPost]
         public IHttpActionResult DeletePerson(Person person)
         {
