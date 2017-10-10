@@ -39,6 +39,7 @@ $("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
     })
         .done(function (result) {
             $("#response").html(`Personen har lagts till i databasen`);
+            showPeople()
         })
         .fail(function (xhr, status, error) {
 
@@ -52,6 +53,34 @@ $("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
             else if (xhr.responseJSON.Message == "contexterror") {
 
                 $("#response").html(`Skriv in en kontext som är minst tre bokstäver lång`);
+            }
+        })    
+})
+
+$("#deletePerson").click(function () {
+
+    let id = $("#id").val()
+
+    console.log(`Loggar in. Person-Id är ${id} och Namnet är ${n}`)
+
+    $.ajax({
+        url: '/api/DeletePerson',
+        method: 'POST',
+        data: {
+            id: id,
+        }
+    })
+        .done(function (result) {
+            $("#response").html(`Personen har tagits bort från databasen`);
+            showPeople()
+        })
+        .fail(function (xhr, status, error) {
+
+            console.log(xhr.responseJSON.Message)
+
+            if (xhr.responseJSON.Message == "id_error") {
+
+                $("#response").html(`Skriv in ett Person-Id med siffra/siffror`);
             }
         })
 })

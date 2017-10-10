@@ -71,5 +71,28 @@ namespace Photo_Database.Controllers
             }
             return Ok();
         }
+
+        [Route("DeletePerson"), HttpPost]
+        public IHttpActionResult DeletePerson(Person person)
+        {
+            //Om personens namn har färre tecken än 4 så svara med BadRequest
+            if (person.Id < 1 ) //TODO - Kolla att det är numeriskt värde (se textfil)
+            {
+                return BadRequest("id_error");
+            }
+
+            var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
+            var sql = $"DELETE FROM Person WHERE PersonId = @id";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(sql, connection);
+                command.Parameters.Add(new SqlParameter("id", person.Id));
+                connection.Open();
+
+                command.ExecuteNonQuery();
+            }
+            return Ok();
+        }
     }
 }
