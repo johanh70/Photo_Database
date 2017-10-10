@@ -1,6 +1,7 @@
 ﻿Förstasidan med valen
-Quit med återvänande till startsidan
+Quit med återvändande till startsidan
 Styling med CSS - importera filer
+Bakgrundsbild - opacity
 Utvidga från Personer till Foton
 TestTo Speech? Finns i solutionen?
 NHibernate?

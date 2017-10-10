@@ -1,6 +1,7 @@
 ﻿body {
     background-image: url('../Img/ocean.jpg');
     background-size: cover;
+    /*opacity: 0.2*/
     /*border-radius: 25px;*/ /*Rundade Hörn!*/
 }
 
@@ -64,19 +65,30 @@ textarea {
     margin: auto;
 }
 
-/*Rotate example*/
-
-
-/* If your rotation angles are fairly uniform, you can use CSS: */
-
-<img id="image_canv" src="/image.png" class="rotate90" > 
-
-/*CSS:*/ 
-
 .rotate90 {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+
+ h1 {
+    margin: auto;
+    width: 60%;
+    padding: 12px 5px;
+}
+
+input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+}
+
+.checkboxtext {
+    font-size: 110%;
+    display: inline;
 }

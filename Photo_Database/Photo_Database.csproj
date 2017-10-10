@@ -155,6 +155,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\Bacground Image Opacity.css" />
     <Content Include="CSS\Site.css" />
     <Content Include="CSS\styles.css" />
     <Content Include="favicon.ico" />
