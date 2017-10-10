@@ -49,9 +49,8 @@ $("#showPeople").click(function () {  // Deklarerar funktionen
 
                 tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td></tr>`)
                 console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
-            }
-            $("#response").html(`Personerna har hämtats`);
+            }            
         })
-        .fail(console.log(`Något gick fel!`));
+        .fail($("#response").html(`Något gick fel!`));
 })
 
