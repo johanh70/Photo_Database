@@ -75,11 +75,10 @@ namespace Photo_Database.Controllers
         [Route("DeletePerson"), HttpPost]
         public IHttpActionResult DeletePerson(Person person)
         {
-            //Om personens namn har färre tecken än 4 så svara med BadRequest
-            if (person.Id < 1 ) //TODO - Kolla att det är numeriskt värde (se textfil)
-            {
-                return BadRequest("id_error");
-            }
+            //if (person.Id < 1 ) //TODO - Kolla att det är numeriskt värde (se textfil)
+            //{
+            //    return BadRequest("id_error");
+            //}
 
             var connectionString = @"Server = (localdb)\mssqllocaldb; Database = Photos; Trusted_Connection = True";
             var sql = $"DELETE FROM Person WHERE PersonId = @id";

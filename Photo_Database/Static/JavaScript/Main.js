@@ -61,7 +61,7 @@ $("#deletePerson").click(function () {
 
     let id = $("#id").val()
 
-    console.log(`Loggar in. Person-Id är ${id} och Namnet är ${n}`)
+    //console.log(`Loggar in. Person-Id är ${id} och Namnet är ${n}`)
 
     $.ajax({
         url: '/api/DeletePerson',
