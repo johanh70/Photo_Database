@@ -1,4 +1,28 @@
-﻿$("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
+﻿function showPeople() {  // Deklarerar funktionen
+
+    $("#peopleTable tbody").empty();
+
+    $.ajax({
+        url: '/api/GetPeople',
+        method: 'GET',
+    })
+        .done(function (result) {
+
+            let tbody = $("#peopleTable tbody") // Pekar på tbody i tabellen peopleTable
+
+            console.log(result)
+            for (let p of result) {
+
+                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td></tr>`)
+                console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
+            }
+        })
+        //.fail($("#response").html(`Något gick fel!`));
+}
+
+showPeople();
+
+$("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
 
     let n = $("#name").val()
     let c = $("#context").val()
@@ -31,26 +55,3 @@
             }
         })
 })
-
-$("#showPeople").click(function () {  // Deklarerar funktionen
-
-    $("#peopleTable tbody").empty();
-
-    $.ajax({
-        url: '/api/GetPeople',
-        method: 'GET',
-    })
-        .done(function (result) {
-
-            let tbody = $("#peopleTable tbody") // Pekar på tbody i tabellen peopleTable
-
-            console.log(result)
-            for (let p of result) {
-
-                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td></tr>`)
-                console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
-            }            
-        })
-        .fail($("#response").html(`Något gick fel!`));
-})
-
