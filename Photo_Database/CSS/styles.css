@@ -1,0 +1,82 @@
+﻿body {
+    background-image: url('../Img/ocean.jpg');
+    background-size: cover;
+    /*border-radius: 25px;*/ /*Rundade Hörn!*/
+}
+
+.lead, .mainHeadline, p {
+    margin: auto;
+    width: 60%;
+    padding: 6px 1px;
+}
+
+h1 {
+    margin: auto;
+    width: 60%;
+    padding: 12px 5px;
+}
+
+form {
+    margin: auto;
+    width: 60%;
+    padding: 12px 20px;
+}
+
+input[type=submit] {
+    width: 60%;
+    background-color: darkturquoise;
+    color: white;
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+button, input, div, textarea {
+    display: block;
+    font-size: 15px;
+    font-family: Arial;
+    margin-bottom: 20px
+}
+
+button, input {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 20px;
+    font-family: Arial;
+    margin: auto;
+}
+
+textarea {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 20px;
+    font-family: Arial;
+    margin: auto;
+}
+
+/*Rotate example*/
+
+
+/* If your rotation angles are fairly uniform, you can use CSS: */
+
+<img id="image_canv" src="/image.png" class="rotate90" > 
+
+/*CSS:*/ 
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}

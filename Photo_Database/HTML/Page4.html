@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link href="../styles.css" rel="stylesheet" />
+
+    <style>
+        h1 {
+            margin: auto;
+            width: 60%;
+            padding: 12px 5px;
+        }
+
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(2); /* IE */
+            -moz-transform: scale(2); /* FF */
+            -webkit-transform: scale(2); /* Safari and Chrome */
+            -o-transform: scale(2); /* Opera */
+            padding: 10px;
+        }
+
+        /* Might want to wrap a span around your checkbox text */
+        .checkboxtext {
+            /* Checkbox text */
+            font-size: 110%;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Fotodatabas</h1>
+        <p class="lead">Vad vill du göra?</p>
+
+        <form action="/Home/Create" method="get">
+            Lägga till nytt foto: <input type="checkbox" name="createBox" value="checked">
+        </form>
+        <form action="/Home/Delete" method="get">
+            Ta bort foto: <input type="checkbox" name="deleteBox" value="checked">
+        </form>
+        <form action="/Home/Choice" method="get">
+            Uppdatera foto: <input type="checkbox" name="updateBox" value="checked">
+        </form>
+        <form action="/Home/Read" method="get">
+            Visa foto: <input type="checkbox" name="readBox" value="checked">
+        </form>
+        <br />
+        <input type="submit" value="OK">
+
+    </div>
+
+</body>
+</html>

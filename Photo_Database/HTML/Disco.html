@@ -1,0 +1,28 @@
+﻿
+<button onclick="start()">Disco</button>
+<button onclick="stop()">Stop</button>
+
+<script>
+
+var colors= ["red", "green", "blue", "white"]
+var colorIndex = 0;
+
+var interval;
+
+function startDisco() {
+
+	document.body.style.backgroundColor = colors[colorIndex];
+	colorIndex++;
+	if (colorIndex>colors.length) colorIndex=0;
+
+}
+
+function start() {
+	interval = setInterval(startDisco, 30);
+}
+
+function stop() {
+	clearInterval(interval);
+}
+
+</script>

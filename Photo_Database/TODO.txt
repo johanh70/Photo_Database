@@ -1,0 +1,7 @@
+﻿Förstasidan med valen
+Quit med återvänande till startsidan
+Styling med CSS - importera filer
+Utvidga från Personer till Foton
+TestTo Speech? Finns i solutionen?
+NHibernate?
+Aurelia?

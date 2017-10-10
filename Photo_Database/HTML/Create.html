@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Fotodatabas</h1>
+        <p class="lead">Lägga till nytt foto</p>
+
+        <p class="lead">Fyll i önskade data och tryck på "OK"</p>
+        <div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+            Datum: <input type="text" name="ShotDate" id="ShotDate" /><br>
+            Plats: <input type="text" name="ShotPlace" id="ShotPlace" /><br>
+            Person-Id: <input type="text" name="PersonId" /><br>
+            Motiv-Id:   <input type="text" name="MotifId" /><br>
+            Album-Id:   <input type="text" name="AlbumId" /><br>
+            Lagringsplats-Id:   <input type="text" name="StoragePlaceId" /><br>
+            @*<button id="okButton">OK</button>*@
+            @*
+            <script src="~/Scripts/callToDatabase.js"></script>*@
+            <button onclick="myFunction()">OK</button>
+            <script>
+            function myFunction() {
+                alert("I am an alert box!");
+            }
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>

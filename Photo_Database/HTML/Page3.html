@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        box.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73AD21;
+        }
+
+        box.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        #box1 {
+            width: auto;
+            height: 50px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        #box2 {
+            width: auto;
+            height: 250px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        div.gallery {
+            position: relative;
+            -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+            -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            padding: 10px;
+            background: white;
+        }
+        
+            div.gallery img {
+                width: 100%;
+                border: 1px solid #8a4419;
+                border-style: inset;
+            }
+
+            div.gallery::after {
+                content: '';
+                position: absolute;
+                z-index: -1; 
+                -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                width: 70%;
+                left: 15%; 
+                height: 100px;
+                bottom: 0;
+    </style>
+       
+</head>
+<body> 
+        <div>
+            <div id="box1" class="box">
+            </div>
+
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Pics/Thailand1.jpg">
+                <img src="../Pics/Thailand1.jpg" alt="" width="300" height="200">
+            </a>
+            <div class="desc">Båten till Koh Samed</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Pics/Thailand2.jpg">
+                <img src="../Pics/Thailand2.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Phrao Wat</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Pics/Thailand3.jpg">
+                <img src="../Pics/Thailand3.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">Matförsäljning på kanalen i Bangkok</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Pics/Thailand4.jpg">
+                <img src="../Pics/Thailand4.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">Tuk-tuk in till stan</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="../Pics/Thailand5.jpg">
+                <img src="../Pics/Thailand5.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">Elefant-trekking i Chiang Mai</div>
+        </div>
+        <div>
+            <div id="box2" class="box">
+            </div>
+
+        </div>
+
+    <script>
+        function floatable(panel, color) {
+
+            let content = panel.querySelector(".content");
+            content.style.backgroundColor = color;
+
+            panel.addEventListener('mouseout', e => {
+                content.style.transform = `perspective(300px) 
+								   rotateY(0deg)
+								   rotateX(0deg)`;
+            });
+
+            panel.addEventListener('mousemove', e => {
+                let w = panel.clientWidth;
+                let h = panel.clientHeight;
+                let y = (e.offsetX - w * 0.5) / w * ANGLE;
+                let x = (1 - (e.offsetY - h * 0.5)) / h * ANGLE;
+
+                content.style.transform = `perspective(300px) 
+								   rotateX(${x}deg)
+								   rotateY(${y}deg)`;
+            });
+
+    </script>
+
+<script>
+            $(document).ready(function () {
+                $("gallery").siblings().css({ "color": "red", "border": "2px solid red" });
+</script>
+        <div>
+            <table>
+                <tr>
+                    <th>Photo Name</th>
+                    <th>Shot Date</th>
+                    <th>Shot Place</th>
+                    <th>Persons</th>
+                    <th>Motif</th>
+                    <th>Album</th>
+                    <th>Storage Place</th>
+                </tr>
+                <tr>
+                    <td>Båten till Koh Samed</td>
+                    <td>2017-01-10</td>
+                    <td>Koh Samed</td>
+                    <td>-</td>
+                    <td>Landskap</td>
+                    <td>Thailand 2017</td>
+                    <td>C:\Users\johan\Pictures</td>
+                </tr>
+                <tr>
+                    <td>Phrao Wat</td>
+                    <td>2017-01-11</td>
+                    <td>Bangkok</td>
+                    <td>-</td>
+                    <td>Byggnad</td>
+                    <td>Thailand 2017</td>
+                    <td>C:\Users\johan\Pictures</td>
+                </tr>
+                <tr>
+                    <td>Matförsäljning på kanalen i Bangkok</td>
+                    <td>2017-01-12</td>
+                    <td>Bangkok</td>
+                    <td>Försäljerskan</td>
+                    <td>Mat</td>
+                    <td>Thailand 2017</td>
+                    <td>C:\Users\johan\Pictures</td>
+                </tr>
+                <tr>
+                    <td>Tuk-tuk in till stan</td>
+                    <td>2017-01-13</td>
+                    <td>Bangkok</td>
+                    <td>Arne och Lisa</td>
+                    <td>Fordon</td>
+                    <td>Resan till Thailand 2017</td>
+                    <td>Fysiskt album</td>
+                </tr>
+                <tr>
+                    <td>Elefant-trekking i Chiang Mai</td>
+                    <td>2017-01-14</td>
+                    <td>Chiang Mai</td>
+                    <td>Föraren</td>
+                    <td>Djur, djungel, personer</td>
+                    <td>Resan till Thailand 2017</td>
+                    <td>Fysiskt album</td>
+                </tr>
+            </table>
+        </div>
+    <a href="Page4.html">
+        <input type="submit" value="OK" />
+    </a>
+    </body>
+</html>

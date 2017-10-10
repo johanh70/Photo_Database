@@ -155,14 +155,43 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\Site.css" />
+    <Content Include="CSS\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="HTML\Animation.html" />
+    <Content Include="HTML\Animation2.html" />
+    <Content Include="HTML\Bottom Tooltip.html" />
+    <Content Include="HTML\Choice.html" />
+    <Content Include="HTML\Create.html" />
+    <Content Include="HTML\Disco.html" />
+    <Content Include="HTML\FloatingRotatingCat.html" />
+    <Content Include="HTML\Page1.html" />
+    <Content Include="HTML\Page2.html" />
+    <Content Include="HTML\Page3 - ImageDown.html" />
+    <Content Include="HTML\Page3.html" />
+    <Content Include="HTML\Page4.html" />
+    <Content Include="HTML\RotateX.html" />
+    <Content Include="HTML\RotateY.html" />
+    <Content Include="HTML\RotateZ.html" />
+    <Content Include="HTML\ShadowEffectBox.html" />
+    <Content Include="HTML\ShadowEffectPhoto.html" />
+    <Content Include="HTML\Style Examples.html" />
+    <Content Include="HTML\Top Tooltip.html" />
+    <Content Include="HTML\TransitionSize.html" />
+    <Content Include="Img\ocean.jpg" />
+    <Content Include="Img\Thailand1.jpg" />
+    <Content Include="Img\Thailand2.jpg" />
+    <Content Include="Img\Thailand3.jpg" />
+    <Content Include="Img\Thailand4.jpg" />
+    <Content Include="Img\Thailand5.jpg" />
     <Content Include="Index.html" />
     <Content Include="Static\JavaScript\Main.js" />
     <Content Include="Static\Validera Numeriskt Värde.txt" />
+    <Content Include="TODO.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
