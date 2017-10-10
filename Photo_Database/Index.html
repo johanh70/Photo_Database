@@ -10,26 +10,9 @@
     </style>
 </head>
 <body>
-    Photo Database
-
-    <table id="peopleTable">
-        <thead>
-            <tr>
-                <td>Namn</td>
-                <td>Kontext</td>
-            </tr>
-        </thead>    
-        <tbody>
-            <!-- 
-            <tr>
-                <td>Lisa</td>
-                <td>vän</td>
-            </tr>-->
-        </tbody>
-    </table>
-
+    <h2>Photo Database</h2>
     <hr />
-
+    <h3>Lägg till person i databasen</h3>
     <div>
         <label>Namn</label>
         <input id="name" type="text" />
@@ -37,11 +20,27 @@
         <label>Kontext</label>
         <input id="context" type="text" />
         <br />
-        <button id="login">OK</button>
+        <button id="addPerson">OK</button>
     </div>
-    <div>
-        <p id="response"></p>
-    </div>
+    <br />
+    <table id="peopleTable">
+        <thead>
+            <tr>
+                <td>Person-Id</td>
+                <td>Namn</td>
+                <td>Kontext</td>
+            </tr>
+        </thead>    
+        <tbody>            
+            <tr>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="showPeople">OK</button>
+
+    <p id="response"></p>
+
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>

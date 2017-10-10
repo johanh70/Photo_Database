@@ -31,6 +31,7 @@ namespace Photo_Database.Controllers
                     var id = reader[0];
                     var personName = reader[1];
                     var personContext = reader[2];
+
                     Person p = new Person();
                     p.Id = (int)id;
                     p.Name = personName.ToString();
@@ -51,7 +52,7 @@ namespace Photo_Database.Controllers
                 return BadRequest("personerror");
             }
 
-            if (person.Context.Length < 4)
+            if (person.Context.Length < 3)
             {
                 return BadRequest("contexterror");
             }
