@@ -86,9 +86,9 @@ namespace Photo_Database.Controllers
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var command = new SqlCommand(sql, connection);
-                command.Parameters.Add(new SqlParameter("id", person.Id));
-                command.Parameters.Add(new SqlParameter("name", person.Name));
-                command.Parameters.Add(new SqlParameter("context", person.Context));
+                command.Parameters.Add(new SqlParameter("id1", person.Id));
+                command.Parameters.Add(new SqlParameter("name2", person.Name));
+                command.Parameters.Add(new SqlParameter("context2", person.Context));
                 connection.Open();
 
                 command.ExecuteNonQuery();
