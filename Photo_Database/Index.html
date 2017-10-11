@@ -14,6 +14,12 @@
             font-weight: bold
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+                $("#hide").hide();
+        });
+    </script>
 </head>
 <body>
     <h2>Photo Database</h2>
@@ -58,10 +64,12 @@
     <div id="hide">
         <h3>Uppdatera person i databasen</h3>
         <div>
-            <label>Skriv in Person-Id</label>
+            <!--<label>Skriv in Person-Id</label>
             <br />
-            <input id="id1" type="text" />
-            <br />
+            <input id="id1" type="text" />-->
+            <div id="updateText">
+                <label><i>Person-Id: , Namn: Kontext: </i></label>
+            </div>
             <p>Uppdatera:</p>
             <label>Namn</label>
             <input id="name2" type="text" />

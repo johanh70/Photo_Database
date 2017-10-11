@@ -83,13 +83,13 @@ td {border:solid 1px; padding:10px}
     <!--<script>
         let wrap = $(".wrap")
 
-        function removePerson(p) {
+        function deletePerson(p) {
             persons = persons.filter(x => x != p)
         }
 
-        $(wrap).on("click", ".remove", function () {
-            let personToRemove = $(this)
-            removePerson(personToRemove)
+        $(wrap).on("click", ".delete", function () {
+            let personToDelete = $(this)
+            deletePerson(personToDelete)
         })
     </script>-->
 

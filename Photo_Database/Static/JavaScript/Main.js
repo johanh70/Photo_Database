@@ -10,12 +10,12 @@
 
             let tbody = $("#peopleTable tbody") // Pekar på tbody i tabellen peopleTable
             //let update = $("#updatePerson")
-            //let removeButtonId = p.Id
+            //let deleteButtonId = p.Id
 
             console.log(result)
             for (let p of result) {
 
-                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button class="update" id="updatePerson">Uppdatera</button></td><td><button class="remove" id="${p.Id}">Ta bort</button>
+                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button class="update" id="${p.Id}">Uppdatera</button></td><td><button class="delete" id="${p.Id}">Ta bort</button>
 </td></tr>`)
                 console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
             }
@@ -61,7 +61,7 @@ $("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
 })
 
 //$("#deletePerson").click(function () {
-$("body").on("click", ".remove", function(){
+$("body").on("click", ".delete", function(){
 
     console.log("Logged")
 
@@ -94,19 +94,18 @@ $("body").on("click", ".remove", function(){
         })
 })
 
-//$("body").on("click", ".update", function () {
+$("body").on("click", ".update", function () {
 
-//    $("#hide").hide();
-//})
+    $("#hide").show();
+    $("label").html('$"Person - Id: , Namn: Kontext: "');  // TODO - sätt in Variablerna i Interpolerad Sträng!
+})
 
 
 $("#updatePerson").click(function () {  
 
-    let id = $("#id1").val()
+    let id = $("#id1").val() //TODO - ändra!
     let n = $("#name2").val()
     let c = $("#context2").val()
-
-    //console.log(`Loggar in. Namnet är ${n} och kontext är ${c}`)
 
     $.ajax({
         url: '/api/updatePerson',
