@@ -9,13 +9,13 @@
         .done(function (result) {
 
             let tbody = $("#peopleTable tbody") // Pekar på tbody i tabellen peopleTable
-            let update = $("#updatePerson")
-            let deletePerson = $("#deletePerson")
+            //let update = $("#updatePerson")
+            //let removeButtonId = p.Id
 
             console.log(result)
             for (let p of result) {
 
-                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button id="updatePerson">OK</button></td><td><button id="deletePerson">OK</button>
+                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button id="updatePerson">OK</button></td><td><button class="remove" id="${p.Id}">Ta bort</button>
 </td></tr>`)
                 console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
             }
@@ -60,9 +60,15 @@ $("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
         })    
 })
 
-$("#deletePerson").click(function () {
+//$("#deletePerson").click(function () {
+$("body").on("click", ".remove", function(){
 
-    let id = $("#id2").val()
+    console.log("Logged")
+
+    console.log($(this).attr("id"))
+
+    ////let id = $("#id2").val()
+    let id = $(this).attr("id")
 
     //console.log(`Loggar in. Person-Id är ${id} och Namnet är ${n}`)
 
