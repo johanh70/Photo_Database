@@ -155,6 +155,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bootstrap\Auto Slideshow.html" />
+    <Content Include="Bootstrap\Basic Bootstrap Page.html" />
+    <Content Include="Bootstrap\Basic Grid System.html" />
+    <Content Include="Bootstrap\Checkbox Form.html" />
+    <Content Include="Bootstrap\Collapsible Text Button.html" />
+    <Content Include="Bootstrap\Coloured Alert Boxes.html" />
+    <Content Include="Bootstrap\Column Sizing.html" />
+    <Content Include="Bootstrap\Dropdown Menu.html" />
+    <Content Include="Bootstrap\Glyphicon Exs.html" />
+    <Content Include="Bootstrap\Hover Rows in Table.html" />
+    <Content Include="Bootstrap\Inv RightAlign NavBar.html" />
+    <Content Include="Bootstrap\Megatron Header.html" />
+    <Content Include="Bootstrap\Page Header.html" />
+    <Content Include="Bootstrap\Previous-Next Pager.html" />
+    <Content Include="Bootstrap\Scrollspy.html" />
+    <Content Include="Bootstrap\Tooltip Positioning.html" />
     <Content Include="CSS\Background Image Opacity.css" />
     <Content Include="CSS\Site.css" />
     <Content Include="CSS\styles.css" />
@@ -165,6 +181,7 @@
     </Content>
     <Content Include="HTML\Animation.html" />
     <Content Include="HTML\Animation2.html" />
+    <Content Include="HTML\Bootstrap.html" />
     <Content Include="HTML\Bottom Tooltip.html" />
     <Content Include="HTML\Choice.html" />
     <Content Include="HTML\Create.html" />
