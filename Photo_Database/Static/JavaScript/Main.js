@@ -9,11 +9,14 @@
         .done(function (result) {
 
             let tbody = $("#peopleTable tbody") // Pekar på tbody i tabellen peopleTable
+            let update = $("#updatePerson")
+            let deletePerson = $("#deletePerson")
 
             console.log(result)
             for (let p of result) {
 
-                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td></tr>`)
+                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button id="updatePerson">OK</button></td><td><button id="deletePerson">OK</button>
+</td></tr>`)
                 console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
             }
         })

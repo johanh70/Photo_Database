@@ -1,0 +1,94 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/countrylist.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- LIST 1 -->
+    <div class="wrap">
+        <ul class="countryList" id="list1"></ul>
+
+        <input class="newcountry" />
+        <button class="addCountry">Add</button><br /><br />
+
+        <span class="limittext">Limit:</span><input class="limit" />
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+
+        let wrap = $(".wrap")
+        let countryList = wrap.find(".countryList")
+        let countries = ["Sweden", "Denmark", "Norway"]
+        let limit = 3;
+
+        redraw()
+
+        // REDRAW
+
+        function redraw() {
+
+            // Show or hide
+
+            if (countries.length >= limit) {
+                countryList.show()
+            } else {
+                countryList.hide()
+            }
+
+            // Render list
+
+            countryList.html("")
+            let even = true
+            for (c of countries) {
+                let classeven = (even) ? " class=\"even\"" : ""
+                countryList.append(`<li${classeven}><span>${c}</span><button class='remove'>Remove</button></li>`)
+                even = !even
+            }
+
+            // Render limit
+
+            $(".limit", wrap).val(limit)
+        }
+
+        // HELPER
+
+        function removeCountry(c) {
+            countries = countries.filter(x => x != c)
+        }
+
+        // EVENTS
+
+        $(wrap).on("click", ".remove", function () {
+            let countryToRemove = $(this).siblings("span").text()
+            removeCountry(countryToRemove)
+            redraw()
+        })
+
+        $(wrap).on("click", ".addCountry", function () {
+            let c = $(".newcountry", wrap).val()
+            countries.push(c)
+            $(".newcountry", wrap).val("")
+            redraw()
+        })
+
+        $(wrap).on("keyup", ".limit", function () {
+            limit = $(".limit", wrap).val()
+            redraw()
+        })
+    </script>
+
+
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"requestId":"1d25b43e53444376a75a03afc3a23b6f","requestMappingFromServer":false}
+    </script>
+    <script type="text/javascript" src="http://localhost:62680/b01eda68df2841fc849c79620f83eab1/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>
