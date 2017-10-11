@@ -15,7 +15,7 @@
             console.log(result)
             for (let p of result) {
 
-                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button id="updatePerson">OK</button></td><td><button class="remove" id="${p.Id}">Ta bort</button>
+                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button class="update" id="updatePerson">Uppdatera</button></td><td><button class="remove" id="${p.Id}">Ta bort</button>
 </td></tr>`)
                 console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
             }
@@ -93,6 +93,12 @@ $("body").on("click", ".remove", function(){
             }
         })
 })
+
+//$("body").on("click", ".update", function () {
+
+//    $("#hide").hide();
+//})
+
 
 $("#updatePerson").click(function () {  
 

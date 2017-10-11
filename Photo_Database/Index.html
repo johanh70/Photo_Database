@@ -5,94 +5,99 @@
     <title></title>
     <style>
         /*@import url('CSS/styles.css');*/
-td {border:solid 1px; padding:10px}
-        thead td {font-weight:bold}
+        td {
+            border: solid 1px;
+            padding: 10px
+        }
 
+        thead td {
+            font-weight: bold
+        }
     </style>
 </head>
 <body>
     <h2>Photo Database</h2>
     <hr />
-    <h3>Lägg till person i databasen</h3>
-    <div>
-        <label>Namn</label>
-        <input id="name" type="text" />
-        <br />
-        <label>Kontext</label>
-        <input id="context" type="text" />
-        <br />
-        <button id="addPerson">OK</button>
-    </div>
-    <br />
-
-    <h3>Uppdatera person i databasen</h3>
-    <div>
-        <label>Person-Id</label>
-        <input id="id1" type="text" />
-        <br />
-        <label>Namn</label>
-        <input id="name2" type="text" />
-        <br />
-        <label>Kontext</label>
-        <input id="context2" type="text" />
-        <br />
-        <button id="updatePerson">OK</button>
-    </div>
-    <br />
-
-    <h3>Ta bort person från databasen</h3>
-    <div>
-        <label>Person-Id</label>
-        <input id="id2" type="text" />
-        <br />
-        <button id="deletePerson">OK</button>
-    </div>
-    <br />
-
 
     <h3>Personer inlagda i databasen:</h3>
 
     <div class="wrap">
-    <table id="peopleTable">
-        <thead>
-            <tr>
-                <td>Person-Id</td>
-                <td>Namn</td>
-                <td>Kontext</td>
-                <td>Uppdatera</td>
-                <td>Ta bort</td>
-            </tr>
-        </thead>    
-        <tbody>            
-            <tr>
-            </tr>
-        </tbody>
-    </table>
+        <table id="peopleTable">
+            <thead>
+                <tr>
+                    <td>Person-Id</td>
+                    <td>Namn</td>
+                    <td>Kontext</td>
+                    <td>Uppdatera</td>
+                    <td>Ta bort</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
     </div>
 
     <p id="response"></p>
 
+    <div>
+        <h3>Lägg till person i databasen</h3>
+        <div>
+            <label>Namn</label>
+            <input id="name" type="text" />
+            <br />
+            <label>Kontext</label>
+            <input id="context" type="text" />
+            <br />
+            <button id="addPerson">OK</button>
+        </div>
+    </div>
     <br />
 
 
+    <div id="hide">
+        <h3>Uppdatera person i databasen</h3>
+        <div>
+            <label>Skriv in Person-Id</label>
+            <br />
+            <input id="id1" type="text" />
+            <br />
+            <p>Uppdatera:</p>
+            <label>Namn</label>
+            <input id="name2" type="text" />
+            <br />
+            <label>Kontext</label>
+            <input id="context2" type="text" />
+            <br />
+            <button id="updatePerson">OK</button>
+        </div>
+    </div>
+    <br />
 
+    <div>
+        <style>
+            /*div.inline {
+                display: inline;
+            }*/
+
+            div#hide {
+                display: block;
+            }
+        </style>
+    </div>
+
+    <!--<div id="hide">
+        <h3>Ta bort person från databasen</h3>
+        <div>
+            <label>Person-Id</label>
+            <input id="id2" type="text" />
+            <br />
+            <button id="deletePerson">OK</button>
+        </div>
+    </div>-->
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
     <script src="Static/JavaScript/Main.js"></script>
-    <!--<script>
-        let wrap = $(".wrap")
-
-        function removePerson(p) {
-            persons = persons.filter(x => x != p)
-        }
-
-        $(wrap).on("click", ".remove", function () {
-            let personToRemove = $(this)
-            removePerson(personToRemove)
-        })
-    </script>-->
-
-
 </body>
 </html>

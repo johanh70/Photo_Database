@@ -188,6 +188,8 @@
     <Content Include="HTML\Create.html" />
     <Content Include="HTML\Disco.html" />
     <Content Include="HTML\FloatingRotatingCat.html" />
+    <Content Include="HTML\Sid2.html" />
+    <Content Include="HTML\Indexhtml.txt" />
     <Content Include="HTML\Page1.html" />
     <Content Include="HTML\Page2.html" />
     <Content Include="HTML\Page3 - ImageDown.html" />

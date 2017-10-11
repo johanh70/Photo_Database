@@ -1,8 +1,10 @@
-﻿Förstasidan med valen
+﻿Funktionaliteten
+Bootstrap - kolumner
+Bootstrap - full lösning
+CSS - bakgrundsbild, tabellstyling m.m.
+Förstasidan med valen
 Quit med återvändande till startsidan
-Styling med CSS - importera filer
-Bakgrundsbild - opacity
-Utvidga från Personer till Foton
-TestTo Speech? Finns i solutionen?
+TextTo Speech? Finns i solutionen?
 NHibernate?
 Aurelia?
+Utvidga från Personer till Foton
