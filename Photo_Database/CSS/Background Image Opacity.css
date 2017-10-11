@@ -1,5 +1,7 @@
 ﻿body {
+}
     /*There is no CSS property background-opacity, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it. div*/
+
 div {
     width: 200px;
     height: 200px;

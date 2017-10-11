@@ -155,7 +155,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\Bacground Image Opacity.css" />
+    <Content Include="CSS\Background Image Opacity.css" />
     <Content Include="CSS\Site.css" />
     <Content Include="CSS\styles.css" />
     <Content Include="favicon.ico" />
@@ -180,6 +180,7 @@
     <Content Include="HTML\RotateZ.html" />
     <Content Include="HTML\ShadowEffectBox.html" />
     <Content Include="HTML\ShadowEffectPhoto.html" />
+    <Content Include="HTML\Style Example.html" />
     <Content Include="HTML\Style Examples.html" />
     <Content Include="HTML\Top Tooltip.html" />
     <Content Include="HTML\TransitionSize.html" />

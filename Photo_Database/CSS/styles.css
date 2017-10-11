@@ -1,9 +1,19 @@
 ﻿body {
+}
+
+body::after {
+    content: "";
     background-image: url('../Img/ocean.jpg');
     background-size: cover;
-    /*opacity: 0.2*/
-    /*border-radius: 25px;*/ /*Rundade Hörn!*/
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
+
 
 .lead, .mainHeadline, p {
     margin: auto;
