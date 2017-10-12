@@ -172,7 +172,9 @@
     <Content Include="Bootstrap\Scrollspy.html" />
     <Content Include="Bootstrap\Tooltip Positioning.html" />
     <Content Include="CSS\Background Image Opacity.css" />
+    <Content Include="CSS\SidebarShowPerson.css" />
     <Content Include="CSS\Site.css" />
+    <Content Include="CSS\stylesheetSidebar.css" />
     <Content Include="CSS\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -188,12 +190,13 @@
     <Content Include="HTML\Create.html" />
     <Content Include="HTML\Disco.html" />
     <Content Include="HTML\FloatingRotatingCat.html" />
+    <Content Include="HTML\IndexMegatron.txt" />
     <Content Include="HTML\Sid2.html" />
     <Content Include="HTML\Indexhtml.txt" />
     <Content Include="HTML\Page1.html" />
     <Content Include="HTML\Page2.html" />
     <Content Include="HTML\Page3 - ImageDown.html" />
-    <Content Include="HTML\Page3.html" />
+    <Content Include="HTML\PhotoGallery.html" />
     <Content Include="HTML\Page4.html" />
     <Content Include="HTML\RotateX.html" />
     <Content Include="HTML\RotateY.html" />
@@ -211,6 +214,10 @@
     <Content Include="Img\Thailand4.jpg" />
     <Content Include="Img\Thailand5.jpg" />
     <Content Include="Index.html" />
+    <Content Include="SidebarAddPersonPage.html" />
+    <Content Include="SidebarDeletePersonPage.html" />
+    <Content Include="SidebarUpdatePersonPage.html" />
+    <Content Include="SidebarShowPersonPage.html" />
     <Content Include="Static\JavaScript\Main.js" />
     <Content Include="Static\Validera Numeriskt Värde.txt" />
     <Content Include="TODO.txt" />

@@ -1,10 +1,15 @@
-﻿Funktionaliteten
-Bootstrap - kolumner
-Bootstrap - full lösning
+﻿Grund:
+Funktionaliteten
 CSS - bakgrundsbild, tabellstyling m.m.
+
+Bra:
+Funktionalitet i alert-rutan "Do you want to delete this person?"
+Bootstrap - kolumner
 Förstasidan med valen
 Quit med återvändande till startsidan
 TextTo Speech? Finns i solutionen?
+
+Plusplus:
 NHibernate?
 Aurelia?
 Utvidga från Personer till Foton

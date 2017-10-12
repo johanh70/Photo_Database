@@ -15,12 +15,19 @@
             console.log(result)
             for (let p of result) {
 
-                tbody.append(`<tr><td>${p.Id}</td><td>${p.Name}</td><td>${p.Context}</td><td><button class="update" id="${p.Id}">Uppdatera</button></td><td><button class="delete" id="${p.Id}">Ta bort</button>
-</td></tr>`)
+                tbody.append(`
+                    <tr>
+                        <td class"cellid">${p.Id}</td>
+                        <td class="cellname">${p.Name}</td>
+                        <td class="cellcontext">${p.Context}</td>
+                        <td><button class="update" id="${p.Id}">Uppdatera</button></td>
+                        <td><button class="delete" id="${p.Id}">Ta bort</button>
+                        </td>
+                    </tr>`)
                 console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
             }
         })
-        //.fail($("#response").html(`Något gick fel!`));
+    //.fail($("#response").html(`Något gick fel!`));
 }
 
 showPeople();
@@ -57,15 +64,19 @@ $("#addPerson").click(function () {  // Funktionen som körs när knappen trycks
 
                 $("#response").html(`Skriv in en kontext som är minst tre bokstäver lång`);
             }
-        })    
+        })
 })
 
 //$("#deletePerson").click(function () {
-$("body").on("click", ".delete", function(){
+$("body").on("click", ".delete", function () {
 
     console.log("Logged")
 
     console.log($(this).attr("id"))
+
+    let answer = confirm("Do you want to delete this person?")
+
+    alert(answer)
 
     ////let id = $("#id2").val()
     let id = $(this).attr("id")
@@ -79,7 +90,7 @@ $("body").on("click", ".delete", function(){
             id: id,
         }
     })
-        .done(function (result) {
+        .done(function (result) {     //Var kommer "result" ifrån?
             $("#response").html(`Personen har tagits bort från databasen`);
             showPeople()
         })
@@ -94,16 +105,58 @@ $("body").on("click", ".delete", function(){
         })
 })
 
-$("body").on("click", ".update", function () {
+$("body").on("click", ".update", function () {  // När man klickar på Uppdatera i Tabellen
+
+    let id = $(this).attr("id")
+
+    let cellnameContent = $(this).parent().siblings(".cellname").text()  // "text" ger alla tecken, medan "html" tolkar taggarna
+    let cellcontextContent = $(this).parent().siblings(".cellcontext").text() // Tom parentes Hämtar värden, medan värden inom parenteserna Skickar in värdena
+
+    //alert(cellnameContent)
+    //alert(cellcontextContent)
+
+    //$("#updateHeading").html(`<i>Person-Id: ${id} <br/>
+    //                             Namn: ${cellnameContent}<br/>
+    //                             Kontext: ${cellcontextContent}</i>`);
+
+    $("#textid").html(`<i>Person-id ${id}<i/>`);
+    $("#id1").val(id);
+    $("#name2").val(cellnameContent);
+    $("#context2").val(cellcontextContent);
 
     $("#hide").show();
-    $("label").html('$"Person - Id: , Namn: Kontext: "');  // TODO - sätt in Variablerna i Interpolerad Sträng!
+
+    //$.ajax({
+    //    url: '/api/GetPeople',
+    //    method: 'GET',
+    //})
+    //    .done(function (result) {
+
+    //        //let update = $("#updatePerson")
+    //        //let deleteButtonId = p.Id
+
+    //        console.log(result)
+
+    //            let id = $(this).attr("id")
+
+    //            //paragraph.append(`${p.Id}${p.Name}${p.Context}${p.Id}""${p.Id}`)
+    //            $("#updateHeading").html(`Person-Id: ${p.Id}, Namn: ${p.Name}, Kontext: ${p.Context}`);
+
+    //            //console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
+    //    })
+
+
+    //let id = $(this).attr("id")
+    //let n = "apa"
+
 })
 
 
-$("#updatePerson").click(function () {  
+$("#updatePerson").click(function () {
 
-    let id = $("#id1").val() //TODO - ändra!
+    let tbody = $("#peopleTable tbody") // Pekar på tbody i tabellen peopleTable
+    //let id = $("#peopleTable tbody").siblings(".cellid").text()  // "text" ger alla tecken, medan "html" tolkar taggarna
+    let id = $("#id1").val() 
     let n = $("#name2").val()
     let c = $("#context2").val()
 
