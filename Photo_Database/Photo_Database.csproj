@@ -191,6 +191,8 @@
     <Content Include="HTML\Disco.html" />
     <Content Include="HTML\FloatingRotatingCat.html" />
     <Content Include="HTML\IndexMegatron.txt" />
+    <Content Include="HTML\AddPeople.html" />
+    <Content Include="HTML\ShowPeople.html" />
     <Content Include="HTML\Sid2.html" />
     <Content Include="HTML\Indexhtml.txt" />
     <Content Include="HTML\Page1.html" />
@@ -213,11 +215,12 @@
     <Content Include="Img\Thailand3.jpg" />
     <Content Include="Img\Thailand4.jpg" />
     <Content Include="Img\Thailand5.jpg" />
-    <Content Include="Index.html" />
+    <Content Include="Gallery.html" />
     <Content Include="SidebarAddPersonPage.html" />
     <Content Include="SidebarDeletePersonPage.html" />
     <Content Include="SidebarUpdatePersonPage.html" />
     <Content Include="SidebarShowPersonPage.html" />
+    <Content Include="Static\JavaScript\ShowPeople.js" />
     <Content Include="Static\JavaScript\Main.js" />
     <Content Include="Static\Validera Numeriskt Värde.txt" />
     <Content Include="TODO.txt" />
