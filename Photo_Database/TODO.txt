@@ -13,3 +13,6 @@ Plusplus:
 NHibernate?
 Aurelia?
 Utvidga från Personer till Foton
+
+
+* Hur får jag rubriker och värden i jämn kolumn i tabellerna Update resp Delete?

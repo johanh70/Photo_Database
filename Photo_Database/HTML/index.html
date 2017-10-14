@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html>    
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link href="../CSS/styles.css" rel="stylesheet" />
+    <style>
+        box.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73AD21;
+        }
+
+        box.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        #box1 {
+            width: auto;
+            height: 50px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        #box2 {
+            width: auto;
+            height: 250px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        div.gallery {
+            position: relative;
+            -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+            -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            padding: 10px;
+            background: white;
+        }
+
+            div.gallery img {
+                width: 100%;
+                border: 1px solid #8a4419;
+                border-style: inset;
+            }
+
+            div.gallery::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                width: 70%;
+                left: 15%;
+                height: 100px;
+                bottom: 0;
+            }
+    </style>
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../Bootstrap/Bootstrap Start Sidebar Template/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="../Bootstrap/Bootstrap Start Sidebar Template/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="../CSS/simple-sidebar.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <script src="/Static/JavaScript/Main.js"></script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Menyval Fotodadabas  
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Foton</a>  
+                </li>
+                <li>
+                    <a href="CategoryPeople.html">Personer</a>
+                </li>
+
+                <!--<div class="dropdown">   TODO!
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>-->
+
+                <!--.dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                }
+
+                .dropdown {
+                position: relative;
+                display: inline-block;
+                }
+
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                }
+
+                .dropdown-content a:hover {background-color: #f1f1f1}
+
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+                }-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <li>
+                    <a href="#">Album</a>
+                </li>
+                <li>
+                    <a href="#">Förvaringsställen</a>
+                </li>
+                <!--<li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>-->
+            </ul>
+        </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="jumbotron text-center">
+                    <h1 id="large">Fotodatabasen</h1>
+                    <p id="medium">Hantera dina foton online</p>
+                    <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>-->
+                    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Meny</a>
+                </div>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div>
+                                    <div id="box1" class="box">
+                                    </div>
+
+                                </div>
+
+                                <div class="gallery">
+                                    <a target="_blank" href="/Img/Thailand1.jpg">
+                                        <img src="/Img/Thailand1.jpg" alt="" width="300" height="200">
+                                    </a>
+                                    <div class="desc">Båten till Koh Samed</div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a target="_blank" href="/Img/Thailand2.jpg">
+                                        <img src="/Img/Thailand2.jpg" alt="Forest" width="600" height="400">
+                                    </a>
+                                    <div class="desc">Phrao Wat</div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a target="_blank" href="/Img/Thailand3.jpg">
+                                        <img src="/Img/Thailand3.jpg" alt="Northern Lights" width="600" height="400">
+                                    </a>
+                                    <div class="desc">Matförsäljning på kanalen i Bangkok</div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a target="_blank" href="/Img/Thailand4.jpg">
+                                        <img src="/Img/Thailand4.jpg" alt="Mountains" width="600" height="400">
+                                    </a>
+                                    <div class="desc">Tuk-tuk in till stan</div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a target="_blank" href="/Img/Thailand5.jpg">
+                                        <img src="/Img/Thailand5.jpg" alt="Mountains" width="600" height="400">
+                                    </a>
+                                    <div class="desc">Elefant-trekking i Chiang Mai</div>
+                                </div>
+                                <div>
+                                    <div id="box2" class="box">
+                                    </div>
+
+                                </div>
+
+                                <script>
+                                    function floatable(panel, color) {
+
+                                        let content = panel.querySelector(".content");
+                                        content.style.backgroundColor = color;
+
+                                        panel.addEventListener('mouseout', e => {
+                                            content.style.transform = `perspective(300px) rotateY(0deg) rotateX(0deg)`;
+                                        });
+
+                                        panel.addEventListener('mousemove', e => {
+                                            let w = panel.clientWidth;
+                                            let h = panel.clientHeight;
+                                            let y = (e.offsetX - w * 0.5) / w * ANGLE;
+                                            let x = (1 - (e.offsetY - h * 0.5)) / h * ANGLE;
+
+                                            content.style.transform = `perspective(300px) rotateX(${x}deg) rotateY(${y}deg)`;
+                                        });
+                                    }
+
+                                </script>
+
+                                <script>
+                                    $(document).ready(function () {
+                                        $("gallery").siblings().css({ "color": "red", "border": "2px solid red" });
+                                    })
+                                </script>
+
+                            <div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

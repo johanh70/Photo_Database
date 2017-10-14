@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>    
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link href="../CSS/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../Bootstrap/Bootstrap Start Sidebar Template/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="../Bootstrap/Bootstrap Start Sidebar Template/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="../CSS/simple-sidebar.css" rel="stylesheet" />
+    <script src="/Static/JavaScript/Main.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Menyval Fotodadabas  
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Foton</a>  
+                </li>
+                <li>
+                    <a id="#menuPersons" href="/HTML/ShowPeople.html">Personer</a>
+                </li>
+
+                <!--<div class="dropdown">   TODO!
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>-->
+
+                <!--.dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                }
+
+                .dropdown {
+                position: relative;
+                display: inline-block;
+                }
+
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                }
+
+                .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                }
+
+                .dropdown-content a:hover {background-color: #f1f1f1}
+
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+
+                .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+                }-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <li>
+                    <a href="#">Album</a>
+                </li>
+                <li>
+                    <a href="#">Förvaringsställen</a>
+                </li>
+                <!--<li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>-->
+            </ul>
+        </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="jumbotron text-center">
+                    <h1 id="large">Fotodatabasen</h1>
+                    <p id="medium">Hantera dina foton online</p>
+                    <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>-->
+                    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Meny</a>
+                </div>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                            <div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

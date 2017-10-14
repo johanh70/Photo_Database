@@ -8,7 +8,9 @@
     })
         .done(function (result) {
 
-            let tbody = $("#peopleTable tbody") 
+            let tbody = $("#peopleTable tbody") // Pekar på tbody i tabellen peopleTable
+            //let update = $("#updatePerson")
+            //let deleteButtonId = p.Id
 
             console.log(result)
             for (let p of result) {
@@ -18,8 +20,7 @@
                         <td class"cellid">${p.Id}</td>
                         <td class="cellname">${p.Name}</td>
                         <td class="cellcontext">${p.Context}</td>
-                        <td><button class="update" id="${p.Id}">Uppdatera</button></td>
-                        <td><button class="delete" id="${p.Id}">Ta bort</button>
+                        <td><button class="update" id="${p.Id}">Uppdatera</button></td>                        
                         </td>
                     </tr>`)
                 console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
@@ -124,6 +125,28 @@ $("body").on("click", ".update", function () {  // När man klickar på Uppdater
 
     $("#hide").show();
 
+    //$.ajax({
+    //    url: '/api/GetPeople',
+    //    method: 'GET',
+    //})
+    //    .done(function (result) {
+
+    //        //let update = $("#updatePerson")
+    //        //let deleteButtonId = p.Id
+
+    //        console.log(result)
+
+    //            let id = $(this).attr("id")
+
+    //            //paragraph.append(`${p.Id}${p.Name}${p.Context}${p.Id}""${p.Id}`)
+    //            $("#updateHeading").html(`Person-Id: ${p.Id}, Namn: ${p.Name}, Kontext: ${p.Context}`);
+
+    //            //console.log(`Personens namn är ${p.Name} och id är ${p.Id}`)
+    //    })
+
+
+    //let id = $(this).attr("id")
+    //let n = "apa"
 
 })
 

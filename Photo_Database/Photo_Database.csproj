@@ -155,24 +155,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bootstrap\Auto Slideshow.html" />
     <Content Include="Bootstrap\Basic Bootstrap Page.html" />
-    <Content Include="Bootstrap\Basic Grid System.html" />
-    <Content Include="Bootstrap\Checkbox Form.html" />
-    <Content Include="Bootstrap\Collapsible Text Button.html" />
-    <Content Include="Bootstrap\Coloured Alert Boxes.html" />
-    <Content Include="Bootstrap\Column Sizing.html" />
     <Content Include="Bootstrap\Dropdown Menu.html" />
-    <Content Include="Bootstrap\Glyphicon Exs.html" />
-    <Content Include="Bootstrap\Hover Rows in Table.html" />
-    <Content Include="Bootstrap\Inv RightAlign NavBar.html" />
     <Content Include="Bootstrap\Megatron Header.html" />
-    <Content Include="Bootstrap\Page Header.html" />
-    <Content Include="Bootstrap\Previous-Next Pager.html" />
-    <Content Include="Bootstrap\Scrollspy.html" />
     <Content Include="Bootstrap\Tooltip Positioning.html" />
     <Content Include="CSS\Background Image Opacity.css" />
     <Content Include="CSS\SidebarShowPerson.css" />
+    <Content Include="CSS\simple-sidebar.css" />
     <Content Include="CSS\Site.css" />
     <Content Include="CSS\stylesheetSidebar.css" />
     <Content Include="CSS\styles.css" />
@@ -181,18 +170,20 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="HTML\Animation.html" />
-    <Content Include="HTML\Animation2.html" />
     <Content Include="HTML\Bootstrap.html" />
     <Content Include="HTML\Bottom Tooltip.html" />
-    <Content Include="HTML\Choice.html" />
-    <Content Include="HTML\Country List Ex.html" />
+    <Content Include="HTML\AddPerson.html" />
+    <Content Include="HTML\Lägg till person.html" />
+    <Content Include="HTML\ShowPeopleWithSidebar.html" />
     <Content Include="HTML\Create.html" />
-    <Content Include="HTML\Disco.html" />
-    <Content Include="HTML\FloatingRotatingCat.html" />
+    <Content Include="HTML\DeletePerson.html" />
+    <Content Include="HTML\index.html" />
     <Content Include="HTML\IndexMegatron.txt" />
-    <Content Include="HTML\AddPeople.html" />
+    <Content Include="HTML\AddPersonOld.html" />
+    <Content Include="HTML\Mall.txt" />
+    <Content Include="HTML\MegatronPage.html" />
     <Content Include="HTML\ShowPeople.html" />
+    <Content Include="HTML\CategoryPeople.html" />
     <Content Include="HTML\Sid2.html" />
     <Content Include="HTML\Indexhtml.txt" />
     <Content Include="HTML\Page1.html" />
@@ -200,15 +191,10 @@
     <Content Include="HTML\Page3 - ImageDown.html" />
     <Content Include="HTML\PhotoGallery.html" />
     <Content Include="HTML\Page4.html" />
-    <Content Include="HTML\RotateX.html" />
-    <Content Include="HTML\RotateY.html" />
-    <Content Include="HTML\RotateZ.html" />
-    <Content Include="HTML\ShadowEffectBox.html" />
-    <Content Include="HTML\ShadowEffectPhoto.html" />
-    <Content Include="HTML\Style Example.html" />
-    <Content Include="HTML\Style Examples.html" />
+    <Content Include="HTML\Testsida.html" />
     <Content Include="HTML\Top Tooltip.html" />
-    <Content Include="HTML\TransitionSize.html" />
+    <Content Include="HTML\UpdatePerson.html" />
+    <Content Include="Img\HeavyGuy.jpg" />
     <Content Include="Img\ocean.jpg" />
     <Content Include="Img\Thailand1.jpg" />
     <Content Include="Img\Thailand2.jpg" />
@@ -220,6 +206,9 @@
     <Content Include="SidebarDeletePersonPage.html" />
     <Content Include="SidebarUpdatePersonPage.html" />
     <Content Include="SidebarShowPersonPage.html" />
+    <Content Include="Static\JavaScript\AddPerson.js" />
+    <Content Include="Static\JavaScript\DeletePerson.js" />
+    <Content Include="Static\JavaScript\UpdatePerson.js" />
     <Content Include="Static\JavaScript\ShowPeople.js" />
     <Content Include="Static\JavaScript\Main.js" />
     <Content Include="Static\Validera Numeriskt Värde.txt" />
@@ -232,7 +221,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Bootstrap\Bootstrap Start Sidebar Template\startbootstrap-simple-sidebar-gh-pages\startbootstrap-simple-sidebar-gh-pages\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

@@ -1,0 +1,151 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <title>Welcome</title>
+    <link href="../CSS/styles.css" rel="stylesheet" />
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../Bootstrap/Bootstrap Start Sidebar Template/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="../Bootstrap/Bootstrap Start Sidebar Template/startbootstrap-simple-sidebar-gh-pages/startbootstrap-simple-sidebar-gh-pages/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Static/JavaScript/AddPerson.js"></script>
+    <link href="../CSS/simple-sidebar.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Menyval Personer
+                    </a>
+                </li>
+                <li>
+                    <a href="ShowPeopleWithSidebar.html">Visa personer i databasen</a>
+                </li>
+                <li>
+                    <a href="Lägg till person.html">Lägg till person</a>
+                </li>
+
+                <li>
+                    <a href="UpdatePerson.html">Uppdatera person</a>
+                </li>
+                <li>
+                    <a href="DeletePerson.html">Ta bort person</a>
+                </li>
+                <li>
+                    <a href="index.html">Tillbaka till startsidan</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <h1><b>Fotodatabasen</b></h1>
+                <p><b>Kategori Personer</b></p>
+                <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>-->
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Meny</a>
+            </div>
+            <div>
+                <div class="col-sm-6">
+                    <!--<div class="col-sm-4">-->
+                    <h3>Personer inlagda i databasen:</h3>
+                    <div>
+                        <table id="peopleTable">
+                            <thead>
+                                <tr>
+                                    <td>Person-Id</td>
+                                    <td>Namn</td>
+                                    <td>Kontext</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Lägg till person i databasen</h3>
+                    <div id="addPerson">
+                        <div>
+                            <div></div>
+                            <label>Namn</label>
+                            <input id="name" type="text" />
+                            <br />
+                            <label>Kontext</label>
+                            <input id="context" type="text" />
+                            <br />
+                            <button id="addPerson">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function floatable(panel, color) {
+
+                    let content = panel.querySelector(".content");
+                    content.style.backgroundColor = color;
+
+                    panel.addEventListener('mouseout', e => {
+                        content.style.transform = `perspective(300px) rotateY(0deg) rotateX(0deg)`;
+                    });
+
+                    panel.addEventListener('mousemove', e => {
+                        let w = panel.clientWidth;
+                        let h = panel.clientHeight;
+                        let y = (e.offsetX - w * 0.5) / w * ANGLE;
+                        let x = (1 - (e.offsetY - h * 0.5)) / h * ANGLE;
+
+                        content.style.transform = `perspective(300px) rotateX(${x}deg) rotateY(${y}deg)`;
+                    });
+                }
+
+            </script>
+
+            <script>
+                $(document).ready(function () {
+                    $("gallery").siblings().css({ "color": "red", "border": "2px solid red" });
+                })
+            </script>
+
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Menu Toggle Script -->
+    <script>
+                $("#menu-toggle").click(function (e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("toggled");
+                });
+    </script>
+
+</body>
+
+</html>
